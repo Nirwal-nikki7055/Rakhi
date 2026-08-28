@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,13 +18,23 @@
             box-sizing: border-box;
         }
 
-        
-          body {
+        body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e5,
+        #fff0f5,
+        #ffdce8
+    );
 }
        
 
@@ -241,31 +252,46 @@
 
         /* Mobile */
 
-        @media(max-width: 650px) {
+       @media(max-width: 650px) {
 
-            h1 {
-                font-size: 29px;
-            }
+    body {
+        min-height: 100vh;
+        padding: 30px 0;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
 
-            .subtitle {
-                font-size: 17px;
-            }
+    .container {
+        width: 90%;
+    }
 
-            .gift {
-                width: 150px;
-                height: 150px;
-            }
+    h1 {
+        font-size: 29px;
+    }
 
-            .gift-icon {
-                font-size: 65px;
-            }
+    .subtitle {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
 
-            .cute-button {
-                font-size: 16px;
+    .gift {
+        width: 150px;
+        height: 150px;
+    }
 
-                padding: 11px 25px;
-            }
-        }
+    .gift-icon {
+        font-size: 65px;
+    }
+
+    .cute-button {
+        font-size: 16px;
+        padding: 11px 25px;
+    }
+
+    .bottom {
+        margin-bottom: 20px;
+    }
+}
 
     </style>
 
