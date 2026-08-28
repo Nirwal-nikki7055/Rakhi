@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Three Gifts 🎁</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: "Comic Sans MS", cursive, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #ffd6e5,
+                #fff0f5,
+                #ffdce8
+            );
+
+            overflow: hidden;
+        }
+
+
+        /* Floating emojis */
+
+        .emoji {
+            position: absolute;
+            font-size: 38px;
+
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .e1 {
+            top: 10%;
+            left: 8%;
+        }
+
+        .e2 {
+            top: 15%;
+            right: 8%;
+            animation-delay: 1s;
+        }
+
+        .e3 {
+            bottom: 12%;
+            left: 7%;
+            animation-delay: 2s;
+        }
+
+        .e4 {
+            bottom: 10%;
+            right: 8%;
+            animation-delay: 1.5s;
+        }
+
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-18px) rotate(8deg);
+            }
+        }
+
+
+        /* Main container */
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+
+            text-align: center;
+        }
+
+
+        h1 {
+            color: #bd3158;
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .subtitle {
+            color: #70465c;
+
+            font-size: 20px;
+
+            margin-bottom: 45px;
+        }
+
+
+        /* Gifts */
+
+        .gifts {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 35px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .gift {
+            width: 190px;
+            height: 190px;
+
+            background: white;
+
+            border-radius: 25px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 15px 35px rgba(190, 70, 110, 0.18);
+
+            transition: 0.4s;
+
+            position: relative;
+        }
+
+
+        .gift:hover {
+            transform: translateY(-15px) scale(1.05);
+
+            box-shadow:
+                0 25px 45px rgba(190, 70, 110, 0.28);
+        }
+
+
+        .gift-icon {
+            font-size: 85px;
+
+            animation: shake 2s infinite;
+        }
+
+
+        @keyframes shake {
+
+            0%, 100% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+
+        .gift-number {
+            color: #bd3158;
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+            margin-top: 8px;
+        }
+
+
+        /* 💗 Cute Button */
+
+        .cute-button {
+            margin-top: 30px;
+
+            padding: 13px 30px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: linear-gradient(
+                135deg,
+                #ff7aa8,
+                #bd3158
+            );
+
+            color: white;
+
+            font-family: "Comic Sans MS", cursive, sans-serif;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 20px rgba(189, 49, 88, 0.25);
+
+            transition: all 0.3s ease;
+        }
+
+
+        .cute-button:hover {
+            transform: translateY(-4px) scale(1.06);
+
+            box-shadow:
+                0 12px 25px rgba(189, 49, 88, 0.35);
+        }
+
+
+        .cute-button:active {
+            transform: scale(0.96);
+        }
+
+
+        /* Bottom text */
+
+        .bottom {
+            margin-top: 18px;
+
+            color: #777;
+
+            font-size: 17px;
+        }
+
+
+        /* Mobile */
+
+        @media(max-width: 650px) {
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+            }
+
+            .gift {
+                width: 150px;
+                height: 150px;
+            }
+
+            .gift-icon {
+                font-size: 65px;
+            }
+
+            .cute-button {
+                font-size: 16px;
+
+                padding: 11px 25px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Floating emojis -->
+
+    <div class="emoji e1">😂</div>
+    <div class="emoji e2">🙈</div>
+    <div class="emoji e3">🤣</div>
+    <div class="emoji e4">😜</div>
+
+
+    <div class="container">
+
+
+        <h1>
+            Each gift has something for you! 🎁
+        </h1>
+
+
+        <p class="subtitle">
+            Choose one... if you dare! 👀😂
+        </p>
+
+
+        <div class="gifts">
+
+
+            <!-- Gift 1 -->
+
+            <div class="gift" onclick="openGift(1)">
+
+                <div class="gift-icon">
+                    🎁
+                </div>
+
+                <div class="gift-number">
+                    Gift 1
+                </div>
+
+            </div>
+
+
+            <!-- Gift 2 -->
+
+            <div class="gift" onclick="openGift(2)">
+
+                <div class="gift-icon">
+                    🎁
+                </div>
+
+                <div class="gift-number">
+                    Gift 2
+                </div>
+
+            </div>
+
+
+            <!-- Gift 3 -->
+
+            <div class="gift" onclick="openGift(3)">
+
+                <div class="gift-icon">
+                    🎁
+                </div>
+
+                <div class="gift-number">
+                    Gift 3
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 💗 Cute Button -->
+
+        <button class="cute-button" onclick="openHeart()">
+            Click here too 💗
+        </button>
+
+
+        <p class="bottom">
+            Psst... Don't open all of them at once! 🤫
+        </p>
+
+
+    </div>
+
+
+    <script>
+
+        function openGift(number) {
+
+            if (number === 1) {
+                window.location.href = "certificate.html";
+            }
+
+            else if (number === 2) {
+                window.location.href = "gift2.html";
+            }
+
+            else if (number === 3) {
+                window.location.href = "gift3.html";
+            }
+
+        }
+
+
+        // 💗 Button click
+
+        function openHeart() {
+            window.location.href = "heart.html";
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+

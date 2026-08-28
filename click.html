@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>One More Thing ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #ffdce8,
+                #fff1f6,
+                #ffd6e5
+            );
+
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Floating hearts */
+
+        .emoji {
+    position: absolute;
+    font-size: 35px;
+    animation: float 4s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.e1 {
+    top: 10%;
+    left: 8%;
+}
+
+.e2 {
+    top: 20%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.e3 {
+    bottom: 15%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.e4 {
+    bottom: 12%;
+    right: 8%;
+    animation-delay: 1.5s;
+}
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+
+        /* Main Card */
+
+        .card {
+            width: 90%;
+            max-width: 550px;
+
+            background: white;
+
+            padding: 55px 30px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 20px 50px rgba(200, 70, 110, 0.2);
+        }
+
+
+        /* Shinchan */
+
+        .shinchan {
+            font-size: 100px;
+            margin-bottom: 20px;
+
+            animation: shy 2s infinite;
+        }
+
+        @keyframes shy {
+
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-5deg) scale(1.05);
+            }
+        }
+
+
+        h1 {
+            color: #bd3158;
+
+            font-size: 32px;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* Buttons */
+
+        .buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+        }
+
+        button {
+            border: none;
+
+            padding: 14px 35px;
+
+            border-radius: 30px;
+
+            font-family: inherit;
+
+            font-size: 19px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        /* YES */
+
+        .yes {
+            background: #ef4772;
+
+            color: white;
+
+            box-shadow:
+                0 8px 20px rgba(239, 71, 114, 0.3);
+        }
+
+        .yes:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* NO */
+
+        .no {
+            background: #ffe1ea;
+
+            color: #bd3158;
+        }
+
+        .no:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* Mobile */
+
+        @media(max-width:600px) {
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .shinchan {
+                font-size: 80px;
+            }
+
+            .buttons {
+                gap: 15px;
+            }
+
+            button {
+                padding: 12px 28px;
+                font-size: 17px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Floating Hearts -->
+
+    <!-- Floating Funny Emojis -->
+
+<div class="emoji e1">😂</div>
+<div class="emoji e2">😜</div>
+<div class="emoji e3">🙈</div>
+<div class="emoji e4">🤣</div>
+
+
+    <!-- Card -->
+
+    <div class="card">
+
+        <div class="shinchan">
+            🥺
+        </div>
+
+        <h1>
+            Do you wanna see it? 👀❤️
+        </h1>
+
+
+        <div class="buttons">
+
+            <button
+                class="yes"
+                onclick="yesClicked()">
+                YES 😎
+            </button>
+
+            <button
+                class="no"
+                onclick="noClicked()">
+                NO 🙈
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function yesClicked() {
+
+          
+                   window.location.href = "gifts.html";
+            
+
+        }
+
+
+        function noClicked() {
+
+            alert(
+                "Are you sure? 🥺👉👈"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>

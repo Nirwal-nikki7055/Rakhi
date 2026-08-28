@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Raksha Bandhan 🎀</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 30px 20px;
+
+            font-family: "Comic Sans MS", cursive, sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffd6e5,
+                    #fff1f6,
+                    #ffdce8
+                );
+
+            overflow-x: hidden;
+        }
+
+
+        /* Floating emojis */
+
+        .emoji {
+
+            position: fixed;
+
+            font-size: 38px;
+
+            animation: float 4s ease-in-out infinite;
+
+            z-index: 1;
+        }
+
+
+        .e1 {
+            top: 8%;
+            left: 7%;
+        }
+
+        .e2 {
+            top: 12%;
+            right: 8%;
+            animation-delay: 1s;
+        }
+
+        .e3 {
+            bottom: 12%;
+            left: 8%;
+            animation-delay: 2s;
+        }
+
+        .e4 {
+            bottom: 10%;
+            right: 8%;
+            animation-delay: 1.5s;
+        }
+
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(8deg);
+            }
+
+        }
+
+
+        /* Main card */
+
+        .card {
+
+            width: 100%;
+
+            max-width: 750px;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            padding: 55px 35px;
+
+            text-align: center;
+
+            border-radius: 35px;
+
+            border: 4px solid #f3a8bc;
+
+            box-shadow:
+                0 25px 60px rgba(190, 70, 110, 0.22);
+
+            position: relative;
+
+            z-index: 2;
+
+            animation: appear 1s ease;
+        }
+
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: scale(0.75);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* Rakhi */
+
+        .rakhi {
+
+            font-size: 85px;
+
+            margin-bottom: 20px;
+
+            animation: spin 4s linear infinite;
+        }
+
+
+        @keyframes spin {
+
+            0% {
+                transform: rotate(-5deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+
+            100% {
+                transform: rotate(-5deg);
+            }
+
+        }
+
+
+        /* Heading */
+
+        h1 {
+
+            font-size: 52px;
+
+            color: #bd3158;
+
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+
+            animation: pop 1.2s ease;
+        }
+
+
+        @keyframes pop {
+
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+        }
+
+
+        .subtitle {
+
+            font-size: 23px;
+
+            color: #70465c;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* Shinchan */
+
+        .shinchan {
+
+            font-size: 120px;
+
+            margin: 15px 0;
+
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+
+        @keyframes bounce {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+        }
+
+
+        /* Message */
+
+        .message {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            padding: 25px;
+
+            background: #fff3f7;
+
+            border-radius: 25px;
+
+            color: #70465c;
+
+            font-size: 20px;
+
+            line-height: 1.7;
+
+            border: 2px dashed #e89aae;
+        }
+
+
+        .highlight {
+
+            color: #bd3158;
+
+            font-size: 25px;
+
+            font-weight: bold;
+        }
+
+
+        .footer {
+
+            margin-top: 30px;
+
+            font-size: 19px;
+
+            color: #777;
+        }
+
+
+        .footer strong {
+
+            color: #bd3158;
+        }
+
+
+        /* Confetti */
+
+        .confetti {
+
+            position: fixed;
+
+            top: -20px;
+
+            font-size: 25px;
+
+            animation: fall 5s linear infinite;
+
+            z-index: 0;
+        }
+
+
+        .c1 {
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .c2 {
+            left: 35%;
+            animation-delay: 1s;
+        }
+
+        .c3 {
+            left: 60%;
+            animation-delay: 2s;
+        }
+
+        .c4 {
+            left: 80%;
+            animation-delay: 0.5s;
+        }
+
+
+        @keyframes fall {
+
+            from {
+                top: -30px;
+                transform: rotate(0deg);
+            }
+
+            to {
+                top: 110vh;
+                transform: rotate(360deg);
+            }
+
+        }
+
+
+        /* Mobile */
+
+        @media(max-width:600px) {
+
+            .card {
+                padding: 45px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .rakhi {
+                font-size: 65px;
+            }
+
+            .shinchan {
+                font-size: 85px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .message {
+                font-size: 17px;
+            }
+
+            .highlight {
+                font-size: 21px;
+            }
+
+        }
+        .next-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #b92e4f;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 5px 12px rgba(185, 46, 79, 0.3);
+    transition: 0.3s ease;
+}
+
+.next-btn:hover {
+    transform: scale(1.08);
+    background: #d63d60;
+}
+
+.rakhi img {
+    width: 520px;
+    height: 120px;
+    object-fit: contain;
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Floating emojis -->
+
+    <div class="emoji e1">🎀</div>
+
+    <div class="emoji e2">😂</div>
+
+    <div class="emoji e3">🙈</div>
+
+    <div class="emoji e4">🎁</div>
+
+
+    <!-- Falling confetti -->
+
+    <div class="confetti c1">✨</div>
+
+    <div class="confetti c2">🎀</div>
+
+    <div class="confetti c3">✨</div>
+
+    <div class="confetti c4">🎉</div>
+
+
+    <!-- Main Card -->
+
+    <div class="card">
+
+
+        <div class="rakhi">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRiYQmS2NIuDdc8Eu7GqVh7sNBym52TmeiS_54D3y74g&s=10" alt="Rakhi">
+        </div>
+
+
+        <h1>
+            Happy Raksha Bandhan! 🎀
+        </h1>
+
+
+        <p class="subtitle">
+            Thread of love , a knot of care and a promise of togetherness 
+        </p>
+
+
+        <div class="shinchan">
+            🥺
+        </div>
+
+
+        <div class="message">
+
+            <span class="highlight">
+               my Bhaiya,
+            </span>
+
+           </div>
+
+        <div class="footer">
+
+            with Lots of love,
+
+            <br>
+
+            <strong>your sister nikki</strong>
+            <br>
+            <a href="gifts.html" class="next-btn">
+    🎁 Open for My Gift 💖
+</a>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

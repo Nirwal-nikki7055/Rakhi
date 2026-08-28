@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scan Karo 😇</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: "Comic Sans MS", cursive, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #8b0000,
+                #d32f2f,
+                #ff5252
+            );
+
+            /* ✅ SCROLL ENABLED */
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            padding: 40px 0;
+        }
+
+
+        /* Floating hearts */
+
+        .heart {
+            position: fixed;
+
+            font-size: 35px;
+
+            animation: float 4s ease-in-out infinite;
+
+            z-index: 0;
+        }
+
+        .h1 {
+            top: 10%;
+            left: 8%;
+        }
+
+        .h2 {
+            top: 15%;
+            right: 10%;
+
+            animation-delay: 1s;
+        }
+
+        .h3 {
+            bottom: 12%;
+            left: 10%;
+
+            animation-delay: 2s;
+        }
+
+        .h4 {
+            bottom: 10%;
+            right: 8%;
+
+            animation-delay: 1.5s;
+        }
+
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+
+        }
+
+
+        /* Main Card */
+
+        .container {
+
+            width: 90%;
+            max-width: 500px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            padding: 35px 25px;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.3);
+
+            /* Card upar rahe */
+            position: relative;
+
+            z-index: 1;
+
+        }
+
+
+        .top-heart {
+
+            font-size: 65px;
+
+            animation: heartbeat 1.2s infinite;
+
+        }
+
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+        }
+
+
+        h1 {
+
+            color: #b71c1c;
+
+            font-size: 32px;
+
+            margin-top: 10px;
+
+        }
+
+
+        .subtitle {
+
+            color: #6d1b1b;
+
+            font-size: 19px;
+
+            margin-top: 10px;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* Photo / QR Space */
+
+        .photo-box {
+
+            width: 260px;
+
+            height: 260px;
+
+            margin: 25px auto;
+
+            background: #fff5f5;
+
+            border: 4px dashed #d32f2f;
+
+            border-radius: 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            overflow: hidden;
+
+        }
+
+
+        .photo-box img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        .placeholder {
+
+            color: #b71c1c;
+
+            font-size: 18px;
+
+            padding: 20px;
+
+            line-height: 1.5;
+
+        }
+
+
+        .funny-text {
+
+            color: #b71c1c;
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+            margin-top: 10px;
+
+        }
+
+
+        .small-text {
+
+            color: #777;
+
+            font-size: 15px;
+
+            margin-top: 8px;
+
+        }
+
+
+        /* Back Button */
+
+        .back-button {
+
+            margin-top: 25px;
+
+            padding: 12px 28px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background: #b71c1c;
+
+            color: white;
+
+            font-family: inherit;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+        }
+
+
+        .back-button:hover {
+
+            transform: scale(1.08);
+
+            background: #8b0000;
+
+        }
+
+
+        /* Mobile */
+
+        @media(max-width: 650px) {
+
+            body {
+                padding: 30px 0;
+            }
+
+            .container {
+                width: 92%;
+                padding: 30px 18px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+            }
+
+            .photo-box {
+                width: 230px;
+                height: 230px;
+            }
+
+            .funny-text {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Floating Hearts -->
+
+    <div class="heart h1">❤️</div>
+
+    <div class="heart h2">💕</div>
+
+    <div class="heart h3">❤️</div>
+
+    <div class="heart h4">💖</div>
+
+
+    <div class="container">
+
+
+        <div class="top-heart">
+            ❤️
+        </div>
+
+
+        <h1>
+            Ek Chhota Sa Kaam Hai 😂
+        </h1>
+
+
+        <p class="subtitle">
+            📸 Scan Karo...
+        </p>
+
+
+        <!-- PHOTO / QR CODE SPACE -->
+
+        <div class="photo-box">
+
+            <!--
+                Yahan apni photo ya QR code lagao.
+
+                Example:
+
+                <img src="photo.jpg" alt="Scan Me">
+            -->
+
+           <div class="photo-box">
+
+    <img src="QR.jpeg" alt="Scan Me">
+
+</div>
+
+        </div>
+
+
+        <div class="funny-text">
+
+            Scan Karo, Punya Kamao 😇😂
+
+        </div>
+
+
+        <div class="small-text">
+
+            Bhagwan sab dekh rahe hain... 👀🙏<br>
+
+            Scan karne wale ko extra blessings milengi! 😂❤️
+
+        </div>
+
+
+        <button class="back-button" onclick="goBack()">
+         here bro
+     </button>
+
+
+    </div>
+
+
+    <script>
+
+    function goBack() {
+        window.location.href = "last.html";
+    }
+
+</script>
+
+
+</body>
+
+</html>
+
